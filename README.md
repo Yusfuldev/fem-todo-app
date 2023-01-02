@@ -41,7 +41,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Yusfuldev/fem-todo-app)
+- Solution URL: [solution URL](https://github.com/Yusfuldev/fem-todo-app)
 - Live Site URL: [live site](https://fem-todo-by-yusfuldev.netlify.app/)
 
 ## My process
