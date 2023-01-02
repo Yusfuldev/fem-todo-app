@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A todo app challenge from frontendmentor"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <header class="input-wrapper">
+      <span>
+        <h2>TODO</h2>
+        <img id="sun" src="./images/icon-sun.svg" alt="" />
+        <img id="moon" src="./images/icon-moon.svg" alt="" />
+      </span>
+      <form>
+        <input
+          type="text"
+          placeholder="Create a new todo..."
+          class="todo-input"
+        />
+        <button><div class="todo-circle"></div></button>
+      </form>
+    </header>
+    <main class="main">
+      <ul class="todo-list">
+        <!-- todo li added with javascript -->
+      </ul>
+
+      <div class="counter">
+        <p id="count"> <b>0 </b>  Item(s) left</p>
+        <div class="filter">
+        <input type="radio" id="all" name="filter" value="all" checked />
+        <label for="all" class="all">All</label>
+
+        <input type="radio" id="active" name="filter" value="active" />
+        <label for="active" class="active">Active</label>
+
+        <input type="radio" id="completed" name="filter" value="completed" />
+        <label for="completed" class="completed">Completed</label>
+      </div>
+        <button id="clear-completed">Clear Completed</button>
+      </div>
+      
+      <p id="drag">Drag and drop to reorder list</p>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Owokoniran Yusuf</a>.
+    </div> -->
+    <script src="app.js"></script>
+  </body>
+</html>

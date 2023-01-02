@@ -1,0 +1,260 @@
+// Variables
+$filter-active: #3a7bfd;
+$Check-bg: #57ddff, #c058f3;
+//  dark theme
+$main-bg: #161722;
+$input-bg: #25273c;
+$text: #cacde8;
+$d-hover: #e4e5f1;
+$completed: #777a92;
+$counter-text: #4d5066;
+$ul-bg: #393a4c;
+
+// Light Theme
+$ul-bgl: #fafafa;
+$main-bgl: #e4e5f1;
+$completedl: #d2d3db;
+$textl: #9394a5;
+$hover: #474a6b;
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  max-width: 375px;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+h2 {
+  letter-spacing: 0.5rem;
+  color: white;
+}
+body {
+  font-size: 1.8rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  background-color: $main-bg;
+}
+.input-wrapper {
+  background-image: url("../images/bg-mobile-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 12vh;
+  padding: 2rem;
+  gap: 3rem;
+}
+span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  #moon {
+    display: none;
+  }
+}
+form {
+  position: relative;
+  width: 100%;
+}
+.todo-input {
+  width: 100%;
+  padding: 1.2rem 4rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  color: $text;
+  background: $input-bg;
+}
+form button {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  background-color: transparent;
+  border: none;
+}
+.todo-circle {
+  cursor: pointer;
+  bottom: 1rem;
+  border: 2px solid $ul-bg;
+  border-radius: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.main {
+  padding: 2rem;
+  padding-bottom: 8rem;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+}
+.counter {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $counter-text;
+  background: $ul-bg;
+  padding: 1.2rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+#count {
+  display: flex;
+  gap: 1rem;
+  b {
+    font-weight: 300;
+  }
+}
+#clear-completed {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: $counter-text;
+  font-size: 1.8rem;
+}
+.filter {
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  left: 0px;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: $ul-bg;
+  padding: 1.2rem;
+  color: $completed;
+  border-radius: 0.5rem;
+}
+.filter input {
+  display: none;
+  &:checked + label {
+    color: $filter-active;
+  }
+}
+.todo-list {
+  list-style: none;
+  margin-top: -4rem;
+  background: $ul-bg;
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: $text;
+}
+.li-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid $completed;
+  position: relative;
+  transition: 0.5s all ease;
+}
+.todo-check {
+  position: absolute;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid $counter-text;
+  left: 1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
+}
+.todo-check img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  pointer-events: none;
+}
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.delete-btn img {
+  pointer-events: none;
+}
+li {
+  margin-left: 3rem;
+  transition: 0.5s all ease;
+}
+#drag {
+  color: $counter-text;
+  margin-top: 8rem;
+}
+.bg {
+  border: transparent;
+}
+.done {
+  text-decoration: line-through;
+  color: $completed;
+}
+.remove {
+  transform: translateX(-60px);
+}
+.focus {
+  color: hsl(220, 98%, 61%);
+}
+.cleared {
+  display: none;
+}
+.todo-list-light {
+  color: $textl;
+  background: $ul-bgl;
+  list-style: none;
+  margin-top: -4rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.counter-light {
+  color: $textl;
+  background: $ul-bgl;
+}
+.bg-light {
+  background-image: url("../images/bg-mobile-light.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  html,
+  body {
+    min-width: 100vw;
+  }
+  .input-wrapper {
+    background-image: url("../images/bg-desktop-dark.jpg");
+    height: 30vh;
+  }
+  span,
+  form,
+  .counter,
+  .todo-list {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .counter {
+    position: relative;
+  }
+  .todo-list {
+    margin-top: -5rem;
+  }
+
+  .filter {
+    position: static;
+    width: unset;
+    margin-top: unset;
+    background: unset;
+    padding: unset;
+  }
+}
